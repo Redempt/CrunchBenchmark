@@ -1,3 +1,9 @@
+# CrunchBenchmark
+Benchmarks of Crunch against other expression evaluation libraries
+
+# Results
+
+```
 Benchmark                                        Mode      Score     Error  Units
 CompileBenchmark.crunchCompileComplexExpression  avgt      2.974 ±   0.033  us/op
 CompileBenchmark.crunchCompileSimpleExpression   avgt      0.050 ±   0.001  us/op
@@ -11,3 +17,5 @@ EvalBenchmark.evalExConstantEval                 avgt  26156.342 ± 183.188  ns/
 EvalBenchmark.evalExSimpleEval                   avgt   2283.572 ±  19.630  ns/op
 EvalBenchmark.exp4jConstantEval                  avgt    540.194 ±   4.434  ns/op
 EvalBenchmark.exp4jSimpleEval                    avgt     44.727 ±   0.554  ns/op
+
+```
