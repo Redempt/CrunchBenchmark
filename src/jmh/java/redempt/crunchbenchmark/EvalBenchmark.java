@@ -38,34 +38,34 @@ public class EvalBenchmark {
 
     }
 
-//    @Benchmark
-//    public double crunchSimpleEval(BenchmarkState state) {
-//        return state.simpleCrunchExpression.evaluate(state.x++);
-//    }
-//
-//    @Benchmark
-//    public double exp4jSimpleEval(BenchmarkState state) {
-//        return state.simpleExp4jExpression.setVariable("x", state.x++).evaluate();
-//    }
-//
-//    @Benchmark
-//    public Object evalExSimpleEval(BenchmarkState state) throws Exception {
-//        return state.simpleEvalExExpression.with("x", state.x++).evaluate();
-//    }
-//
-//    @Benchmark
-//    public double crunchConstantEval(BenchmarkState state) {
-//        return state.constantCrunchExpression.evaluate();
-//    }
-//
-//    @Benchmark
-//    public double exp4jConstantEval(BenchmarkState state) {
-//        return state.constantExp4jExpression.evaluate();
-//    }
+    @Benchmark
+    public double crunchSimpleEval(BenchmarkState state) {
+        return state.simpleCrunchExpression.evaluate(state.x++);
+    }
 
     @Benchmark
-    public Object evalExConstantEval(BenchmarkState state) throws Exception {
-        return state.constantEvalExExpression.evaluate();
+    public double exp4jSimpleEval(BenchmarkState state) {
+        return state.simpleExp4jExpression.setVariable("x", state.x++).evaluate();
+    }
+
+    @Benchmark
+    public Object evalExSimpleEval(BenchmarkState state) throws Exception {
+        return state.simpleEvalExExpression.with("x", state.x++).evaluate();
+    }
+
+    @Benchmark
+    public double crunchConstantEval(BenchmarkState state) {
+        return state.constantCrunchExpression.evaluate();
+    }
+
+    @Benchmark
+    public double exp4jConstantEval(BenchmarkState state) {
+        return state.constantExp4jExpression.evaluate();
+    }
+
+    @Benchmark
+    public Object evalExConstantEval(BenchmarkState state) {
+        return evalExConstantEval(state);
     }
 
 }
